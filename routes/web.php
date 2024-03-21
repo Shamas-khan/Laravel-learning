@@ -89,16 +89,23 @@ Route::get('/', function () {
 
 
 // group routes 
-Route::prefix('page')->group(function(){
+// Route::prefix('page')->group(function(){
 
-    Route::get('/post', function () {
-     return view('post');
-});
+//     Route::get('/post', function () {
+//      return view('post');
+// });
 
-Route::get('/first', function () {
-    return view('firstpost');
-});
+// Route::get('/first', function () {
+//     return view('firstpost');
+// });
 
-});
+// });
 
 // url bany gi  page/post  and page/first 
+
+
+// 404 page
+
+Route::fallback(function(){
+    return "<h1>not found</h1>";
+});
