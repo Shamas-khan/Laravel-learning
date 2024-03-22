@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // Route::get('/post', function () {
 //      return view('post');
@@ -106,6 +106,16 @@ Route::get('/', function () {
 
 // 404 page
 
-Route::fallback(function(){
-    return "<h1>not found</h1>";
+// Route::fallback(function(){
+//     return "<h1>not found</h1>";
+// });
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+
+// passing data 
+Route::get('/', function () {
+    return view('firstpost');
 });
