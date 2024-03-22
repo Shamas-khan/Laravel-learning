@@ -116,6 +116,18 @@ use Illuminate\Support\Facades\Route;
 
 
 // passing data 
+// Route::get('/', function () {
+//     $user="shamas";
+//     // return view('firstpost',['user'=>$user]);
+//     // return view('firstpost')->with('user','shams');
+//     // return view('firstpost')->with('user',$user);
+//     // return view('firstpost')->with('user',$user)->with('city','pak');
+// // return view('firstpost')->withUser($user)->withCity('pak');
+
+// });
+
 Route::get('/', function () {
-    return view('firstpost');
+    return view('first');
 });
+
+
