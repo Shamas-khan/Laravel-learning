@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -126,8 +127,18 @@ use Illuminate\Support\Facades\Route;
 
 // });
 
-Route::get('/', function () {
-    return view('first');
+// Route::get('/{id?}',[PageController::class,'showUser']);
+
+
+// Route::get('/',[PageController::class,'home'])->name('home');
+// Route::get('/contact',[PageController::class,'contact'])->name('contact');
+// Route::get('/user',[PageController::class,'user'])->name('user');
+
+Route::controller(PageController::class)->group(function(){
+
+    Route::get('/','home')->name('home');
+Route::get('/contact','contact')->name('contact');
+Route::get('/user','user')->name('user');
 });
 
 
